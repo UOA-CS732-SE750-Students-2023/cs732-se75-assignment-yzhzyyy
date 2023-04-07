@@ -35,23 +35,23 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 ## 2. Project Files Overview
 <img src="./images/catalog.jpg" width="15%" height = "15%"/><br>
 
-> * `/app`: <br>It stores the main display pages, including the `index.js` and `modal.js` page.  
-> * `/components`: <br>It stores the components used in the project, including three custom components: `ScreenHeaderBtn`, `Pokemon`, and `Search`.  
-> * `/constants`: <br>It stores `icons.js`, which is used to make the image resources constant so that they can be accessed directly in the project without specifying their paths again.  
+> * `/app`: It stores the main display pages, including the `index.js` and `modal.js` page.  
+> * `/components`: It stores the components used in the project, including three custom components: `ScreenHeaderBtn`, `Pokemon`, and `Search`.  
+> * `/constants`: It stores `icons.js`, which is used to make the image resources constant so that they can be accessed directly in the project without specifying their paths again.  
 > * `/images`: It stores the images used in the project.  
 > * `pokemon.json`: Store Pokemon information using an array, including id, url, and name.
 
 <br>
 
-## 3. Details
+## 3. File Details
 
-### _layout.js
+### /app/_layout.js
 In this file, I created a React functional component called `Layout` which defines a stack navigation using the Expo Router library.<br>This Component returns a `Stack` component. There are two screens defined within the `Stack` component: `home` and `modal`. The `home` screen represents the main content and the `modal` screen represents a modal that can be displayed on top of the main content. <br> The Expo Router library provides navigation functionality for moving between screens in the stack.
 
-### home.js
+### /app/home.js
 This file implements the redirection functionality.<br> When the stack in `_layout.js` pushes out the home page, the index component in `home.js` is called, which uses the `Redirect` component to redirect to `index.js`. <br> In `index.js`, the actual home page is defined. This enables the mobile end to display the main page.<br>
 
-### index.js
+### /app/index.js
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br>
 > **Components**<br>
@@ -60,5 +60,31 @@ It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `S
 > * `ScrollView`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
 > * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.
 
+### Search.jsx
+In `search.jsx`, I defined a component named `Search` which returns a `View` component containing a search button and a text input field. The search button includes a `TouchableOpacity` component with the `searchBtn` style class and an `Image` component.<br>
+> `TouchableOpacity` component provides touchable feedback for both Android and iOS platforms.
+> `TextInput` allows users to input text into an application. `placeholder="Search..."` sets a default text "Searh..."
+
+### Pokemon.jsx
+`Pokemon` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
+Inside `ScrollView` component, `data.map` function is used to iterate through the array of Pokemon objects and create a `TouchableOpacity` element for each item to show every Pokemon. <br>
+
+### ScreenHeaderBtn.jsx
+The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPress`.<br>
+* In `TouchableOpacity` component, when the user presses on this component, the `onPress` function passed as a prop is triggered.<br>
+* In `Image` component, `resizeMode='cover'` is to ensure that the image completely covers the Image component's container.<br>
+* The `dimension` prop is passed to the btnImg function as an argument to set the size of the Image component.<br>
+
+### screenheader.style.js
+This file exports a StyleSheet object named styles that contains two styles: `btnImg` and `btnContainer`.<br>
+> `StyleSheet.create` is used to create a reusable StyleSheet object. The `StyleSheet` object returned by can then be referenced in components to apply the defined styles. In components, we can access styles by referencing the property names of the style sheet object such as: `styles.btnImg(dimension)`.
+> `btnImg` style is a function takes a `dimension` parameter which is used to set width and height of the `Image` component<br>
+
+
+### Pokemon.style.js and Search.style.js
+These two files define the styles for the `Pokemon` and `Search` components, respectively. The styles are then referenced in components using a syntax like `<styles.pokemonName>`.<br>
+
+### icons.js
+This file makes image resources available as constants for later references, without the need to use URLs.<br>
 
 
