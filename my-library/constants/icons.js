@@ -1,5 +1,5 @@
-import menu from "../icons/menu.png";
-import search from "../icons/search.png";
+import menu from "../images/menu.png";
+import search from "../images/search.png";
 
 export default {
   menu,
