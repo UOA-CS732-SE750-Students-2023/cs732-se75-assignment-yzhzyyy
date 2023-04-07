@@ -62,8 +62,8 @@ It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `S
 
 ### Search.jsx
 In `search.jsx`, I defined a component named `Search` which returns a `View` component containing a search button and a text input field. The search button includes a `TouchableOpacity` component with the `searchBtn` style class and an `Image` component.<br>
-> `TouchableOpacity` component provides touchable feedback for both Android and iOS platforms.
-> `TextInput` allows users to input text into an application. `placeholder="Search..."` sets a default text "Searh..."
+> * `TouchableOpacity` component provides touchable feedback for both Android and iOS platforms.
+> * `TextInput` allows users to input text into an application. `placeholder="Search..."` sets a default text "Searh..."
 
 ### Pokemon.jsx
 `Pokemon` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
@@ -77,8 +77,8 @@ The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPr
 
 ### screenheader.style.js
 This file exports a StyleSheet object named styles that contains two styles: `btnImg` and `btnContainer`.<br>
-> `StyleSheet.create` is used to create a reusable StyleSheet object. The `StyleSheet` object returned by can then be referenced in components to apply the defined styles. In components, we can access styles by referencing the property names of the style sheet object such as: `styles.btnImg(dimension)`.
-> `btnImg` style is a function takes a `dimension` parameter which is used to set width and height of the `Image` component<br>
+> * `StyleSheet.create` is used to create a reusable StyleSheet object. The `StyleSheet` object returned by can then be referenced in components to apply the defined styles. In components, we can access styles by referencing the property names of the style sheet object such as: `styles.btnImg(dimension)`.
+> * `btnImg` style is a function takes a `dimension` parameter which is used to set width and height of the `Image` component<br>
 
 
 ### Pokemon.style.js and Search.style.js
