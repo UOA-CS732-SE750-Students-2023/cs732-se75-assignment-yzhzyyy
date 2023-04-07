@@ -34,7 +34,9 @@ Download the `my-library` folder and open it with a code editor (using VSCode as
 ### Step 2:
 Open the terminal in VSCode and enter the following code to install the necessary tools. <br>
 > * install npm:  
-> ``` npm install ```
+``` 
+npm install 
+```
 > * install expo-cli:  
 > ``` npm install -g expo-cli ```
 > * Install the dependency package of react-native version 0.71.6 in the current project:    
@@ -63,20 +65,20 @@ Install the `Expo Go` app on your mobile phone.<br> For iOS, you can open your c
 
 ### /app/_layout.js
 This is a layout route for a directory <br>
-In this file, I created a React functional component called `Layout` which defines a stack navigation using the Expo Router library.<br>This Component returns a `Stack` component. There are two screens defined within the `Stack` component: `home` and `modal`. The `home` screen represents the main content and the `modal` screen represents a modal that can be displayed on top of the main content. <br> The Expo Router library provides navigation functionality for moving between screens in the stack.
+In this file, I created a React functional component called `Layout` which defines a stack navigation using the Expo Router library.<br>This Component returns a `<Stack>` component. There are two screens defined within the `<Stack>` component: `<home>` and `<modal>`. The `home` screen represents the main content and the `modal` screen represents a modal that can be displayed on top of the main content. <br> The Expo Router library provides navigation functionality for moving between screens in the stack.
 
 ### /app/home.js
-This file implements the redirection functionality.<br> When the stack in `_layout.js` pushes out the home page, the index component in `home.js` is called, which uses the `Redirect` component to redirect to `index.js`. <br> In `index.js`, the actual home page is defined. This enables the mobile end to display the main page.<br>
+This file implements the redirection functionality.<br> When the stack in `_layout.js` pushes out the home page, the index component in `home.js` is called, which uses the `<Redirect>` component to redirect to `index.js`. <br> In `index.js`, the actual home page is defined. This enables the mobile end to display the main page.<br>
 
 ### /app/index.js
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br> It defines a screen in a Stack Navigator in a React Navigation application. The screen is customized using some specific options for the navigation header. <br>
 > **Components**<br>
-> * `Stack.Screen`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience.<br>
-> * `SafeAreaView`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
-> * `LinearGradient`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
-> * `ScrollView`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
-> * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.<br>  
+> * `<Stack.Screen>`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience.<br>
+> * `<SafeAreaView>`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
+> * `<LinearGradient>`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
+> * `<ScrollView>`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
+> * `<ScreenHeaderBtn>`,`<Search>` and `<Pokemon>` are three custom components, which will be explained later.<br>  
 
 
 > **hook**<br>
@@ -91,22 +93,22 @@ This would navigate the user to the `/modal` page.<br>
 ### /app/modal.js
 This code provides a basic modal screen with a message and a dismiss button. When the user clicks on the menu button in the top right corner, a floating window will pop up.<br><br>
 A Modal page is a UI design component that pops up as a floating layer on the current page to display temporary content. <br><br>
-The `StatusBar` component sets the status bar color to white, and the `Text` component displays a message indicating that the Pokemon list is under construction.
+The `<StatusBar>` component sets the status bar color to white, and the `<Text>` component displays a message indicating that the Pokemon list is under construction.
 
 ### Search.jsx
-In `search.jsx`, I defined a component named `Search` which returns a `View` component containing a search button and a text input field. The search button includes a `TouchableOpacity` component with the `searchBtn` style class and an `Image` component.<br>
-> * `TouchableOpacity` component provides touchable feedback for both Android and iOS platforms.
-> * `TextInput` allows users to input text into an application. `placeholder="Search..."` sets a default text "Searh..."
+In `search.jsx`, I defined a component named `Search` which returns a `<View>` component containing a search button and a text input field. The search button includes a `<TouchableOpacity>` component with the `searchBtn` style class and an `<Image>` component.<br>
+> * `<TouchableOpacity>` component provides touchable feedback for both Android and iOS platforms.
+> * `<TextInput>` allows users to input text into an application. `placeholder="Search..."` sets a default text "Searh..."
 
 ### Pokemon.jsx
-`Pokemon` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
-Inside `ScrollView` component, `data.map` function is used to iterate through the array of Pokemon objects and create a `TouchableOpacity` element for each item to show every Pokemon. <br>
-> * `require()` function: This is a built-in Node.js function that allows you to load modules or files in your code. <br>After obtaining the data variable, use the `map()` function within a `ScrollView` component to render each Pokemon in the data variable to the content defined below. <br>
+`<Pokemon>` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
+Inside `<ScrollView>` component, `data.map` function is used to iterate through the array of Pokemon objects and create a `<TouchableOpacity>` element for each item to show every Pokemon. <br>
+> * `require()` function: This is a built-in Node.js function that allows you to load modules or files in your code. <br>After obtaining the data variable, use the `map()` function within a `<ScrollView>` component to render each Pokemon in the data variable to the content defined below. <br>
 
 ### ScreenHeaderBtn.jsx
-The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPress`.<br>
-* In `TouchableOpacity` component, when the user presses on this component, the `onPress` function passed as a prop is triggered.<br>
-* In `Image` component, `resizeMode='cover'` is to ensure that the image completely covers the Image component's container.<br>
+The `<ScreenHeaderBtn>` component takes three props: `iconUrl`, `dimension`, `onPress`.<br>
+* In `<TouchableOpacity>` component, when the user presses on this component, the `onPress()` function passed as a prop is triggered.<br>
+* In `<Image>` component, `resizeMode='cover'` is to ensure that the image completely covers the Image component's container.<br>
 * The `dimension` prop is passed to the btnImg function as an argument to set the size of the Image component.<br>
 
 ### screenheader.style.js
@@ -116,7 +118,7 @@ This file exports a StyleSheet object named styles that contains two styles: `bt
 
 
 ### Pokemon.style.js and Search.style.js
-These two files define the styles for the `Pokemon` and `Search` components, respectively. The styles are then referenced in components using a syntax like `<styles.pokemonName>`.<br>
+These two files define the styles for the `<Pokemon>` and `<Search>` components, respectively. The styles are then referenced in components using a syntax like `<styles.pokemonName>`.<br>
 
 ### icons.js
 This file makes image resources available as constants for later references, without the need to use URLs.<br>
