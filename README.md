@@ -29,8 +29,20 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 
 ## 1. User Guide  
 
-**Step 1**: Download the project file and open it with a code editor (using VSCode as an example).  
-**Step 2**: Open the terminal in VSCode and enter the following code to install the necessary tools.  
+**Step 1**: Download the `my-library` folder and open it with a code editor (using VSCode as an example).  
+**Step 2**: Open the terminal in VSCode and enter the following code to install the necessary tools.  <br>
+> * install npm
+```npm install```
+> * install expo-cli
+```npm install -g expo-cli```
+> * Install the dependency package of react-native version 0.71.6 in the current project.
+```npx expo install react-native@0.71.6```
+> * Start npm
+```npm start``` 
+> Then you will see the following message:<br>
+> <img src="./images/Metro.jpg"/><br>
+
+
 
 
 ## 2. Project Files Overview
@@ -57,31 +69,26 @@ This file implements the redirection functionality.<br> When the stack in `_layo
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br> It defines a screen in a Stack Navigator in a React Navigation application. The screen is customized using some specific options for the navigation header. <br>
 > **Components**<br>
-> * `Stack.Screen`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience. The options for `<Stack.Screen>` is like this:<br>
-> ```
-<Stack.Screen
-  options={{
-    headerBackground: () => (
-      <LinearGradient
-          colors={['#ad9ec7', '#ecccc5']}
-          style={{ flex: 1 }}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 0, y: 1 }}
-      />),
-    headerTitle: '',
-    headerShadowVisible:false,
-    headerLeft: () => (
-        <ScreenHeaderBtn onPress={() => router.push('./modal')} iconUrl={icons.menu} dimension='60%'/>
-    )
-  }}
-/>
-```
-
+> * `Stack.Screen`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience.<br>
 > * `SafeAreaView`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
 > * `LinearGradient`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
 > * `ScrollView`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
-> * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.
+> * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.<br>  
 
+
+> **hook**<br>
+> * `useRouter()`: This hook is used to get access to the routing object. It allows the developer to programmatically navigate to another page using the `push()` method. For example:
+```
+const router = useRouter();
+<ScreenHeaderBtn onPress={() => router.push('./modal')}/>
+```
+This would navigate the user to the `/modal` page.<br>
+
+
+### /app/modal.js
+This code provides a basic modal screen with a message and a dismiss button. When the user clicks on the menu button in the top right corner, a floating window will pop up.<br>
+> A Modal page is a UI design component that pops up as a floating layer on the current page to display temporary content. <br>
+The `StatusBar` component sets the status bar color to white, and the `Text` component displays a message indicating that the Pokemon list is under construction.
 
 ### Search.jsx
 In `search.jsx`, I defined a component named `Search` which returns a `View` component containing a search button and a text input field. The search button includes a `TouchableOpacity` component with the `searchBtn` style class and an `Image` component.<br>
@@ -91,6 +98,11 @@ In `search.jsx`, I defined a component named `Search` which returns a `View` com
 ### Pokemon.jsx
 `Pokemon` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
 Inside `ScrollView` component, `data.map` function is used to iterate through the array of Pokemon objects and create a `TouchableOpacity` element for each item to show every Pokemon. <br>
+> * `require` function: This function is a built-in Node.js function that allows you to load modules or files in your code. 
+```
+const data = require('../../../pokemon.json');
+```
+After obtaining the data variable, use the `map` function within a `ScrollView` component to render each Pokemon in the data variable to the content defined below. <br>
 
 ### ScreenHeaderBtn.jsx
 The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPress`.<br>
@@ -101,7 +113,7 @@ The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPr
 ### screenheader.style.js
 This file exports a StyleSheet object named styles that contains two styles: `btnImg` and `btnContainer`.<br>
 > * `StyleSheet.create` is used to create a reusable StyleSheet object. The `StyleSheet` object returned by can then be referenced in components to apply the defined styles. In components, we can access styles by referencing the property names of the style sheet object such as: `styles.btnImg(dimension)`.
-> * `btnImg` style is a function takes a `dimension` parameter which is used to set width and height of the `Image` component<br>
+> * `btnImg` style is a function takes a `dimension` parameter which is used to set width and height of the `Image` component. When the user clicks on the Image component, the dimension parameter will be passed back to btnImg.<br>
 
 
 ### Pokemon.style.js and Search.style.js
