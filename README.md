@@ -58,7 +58,7 @@ This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br> It defines a screen in a Stack Navigator in a React Navigation application. The screen is customized using some specific options for the navigation header. <br>
 > **Components**<br>
 > * `Stack.Screen`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience. The options for `<Stack.Screen>` is like this:<br>
-```
+> ```
 <Stack.Screen
   options={{
     headerBackground: () => (
