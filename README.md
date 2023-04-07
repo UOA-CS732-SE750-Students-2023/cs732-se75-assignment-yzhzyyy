@@ -27,12 +27,12 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
   
 ## 'My-Library' 
 
-#### How to test this app on real mobile devices?  
+#### 1. How to test this app on real mobile devices?  
 
 **Step 1**: Download the project file and open it with a code editor (using VSCode as an example).  
 **Step 2**: Open the terminal in VSCode and enter the following code to install the necessary tools.  
 
-#### Project Files Overview
+#### 2. Project Files Overview
 
 
 
