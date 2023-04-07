@@ -10,6 +10,12 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 
 #### 2. Difference Between React and React Native <br>
 
+|  | React | React Native |
+| --- | --- | --- |
+| User interface | HTML tags | JSX tags |
+| Style | CSS | JavaScript |
+| Randering | virtual DOM | native APIs |
+| Route | React Router | Navigator library |<br>
 i) **Usre** interface：React components can include HTML tags，while RN supports specific JSX tags.<br>
 ii) **Style**：React uses CSS for rendering styles, while RN uses JavaScript for rendering styles.<br>
 iii) **Randering**：React uses a virtual DOM, while RN uses native APIs.<br>
