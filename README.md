@@ -44,11 +44,9 @@ Open the terminal in VSCode and enter the following code to install the necessar
 
 Then you will see the following message:<br>
 <img src="./images/Metro.jpg" width = "70%" height = "70%"/><br>
-Additionally, you need to install the Expo Go app on your mobile phone. For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.
 
-
-
-
+### Step 3:
+Install the `Expo Go` app on your mobile phone.<br> For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.
 
 ## 2. Project Files Overview
 <img src="./images/catalog.jpg" width="15%" height = "15%"/><br>
