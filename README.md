@@ -80,11 +80,13 @@ This file implements the redirection functionality.<br> When the stack in `_layo
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br> It defines a screen in a Stack Navigator in a React Navigation application. The screen is customized using some specific options for the navigation header. <br>
 > **Components**<br>
+> * `<Text>`: This is a React Native text component which is used for displaying plain text.
 > * `<Stack.Screen>`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience.<br>
 > * `<SafeAreaView>`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
 > * `<LinearGradient>`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
 > * `<ScrollView>`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
 > * `<ScreenHeaderBtn>`,`<Search>` and `<Pokemon>` are three custom components, which will be explained later.<br>  
+
 
 
 > **hook**<br>
@@ -129,4 +131,20 @@ These two files define the styles for the `<Pokemon>` and `<Search>` components,
 ### icons.js
 This file makes image resources available as constants for later references, without the need to use URLs.<br>
 
+## 4. Style system
+### Style sheet object
+"Style sheet object" refers to a way of encapsulating style properties and values into a JavaScript object for defining styles on React Native components. The style sheet object is used to define the styles of a component in a structured and reusable way, allowing for easy modification and consistency across the application. It is a core feature of the React Native styling system.<br>
+For example:<br>
+``` JS
+const styles = StyleSheet.create({
+    container:{
+        marginTop: 0,
+    })}
+```
 
+### Inline styles
+"Inline styles" refers to a way of defining styles for a React Native component by directly adding style properties and values as attributes in the component's JSX code. <br>
+For example:<br>
+``` JS
+<SafeAreaView style={{flex:1, backgroundColor: "#ecccc5"}}>
+```
