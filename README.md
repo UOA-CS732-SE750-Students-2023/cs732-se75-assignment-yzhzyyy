@@ -35,11 +35,11 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 ## 2. Project Files Overview
 <img src="./images/catalog.jpg" width="15%" height = "15%"/><br>
 
-> * The `app` folder stores the main display pages, including the `index` page and `modal` page.  
-> * The `components` folder mainly stores the components used in the project, including three custom components: `ScreenHeaderBtn`, `Pokemon`, and `Search`.  
-> * The `constants` folder stores the `icons` file, which is used to make the image resources constant so that they can be accessed directly in the project without specifying their paths again.  
-> * The `images` folder stores the images used in the project.  
-> * In the `pokemon.json` file, I used an array to record the information of each Pokemon.  
+> * `/app`: <br>It stores the main display pages, including the `index.js` and `modal.js` page.  
+> * `/components`: <br>It stores the components used in the project, including three custom components: `ScreenHeaderBtn`, `Pokemon`, and `Search`.  
+> * `/constants`: <br>It stores `icons.js`, which is used to make the image resources constant so that they can be accessed directly in the project without specifying their paths again.  
+> * `/images`: It stores the images used in the project.  
+> * `pokemon.json`: Store Pokemon information using an array, including id, url, and name.
 
 <br>
 
@@ -55,10 +55,10 @@ This file implements the redirection functionality.<br> When the stack in `_layo
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br>
 > **Components**<br>
-> * `SafeAreaView`: SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
-> * `LinearGradient`: LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
-> * `ScrollView`: ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
-> * `Search` and `Pokemon` are two custom components, which will be explained later.
+> * `SafeAreaView`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
+> * `LinearGradient`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
+> * `ScrollView`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
+> * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.
 
 
 
