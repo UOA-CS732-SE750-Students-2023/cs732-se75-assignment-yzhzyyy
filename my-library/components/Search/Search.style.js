@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
         tintColor: "#c06f98",
     },
     searchContainer: {
-        justifyContent: "center", //将子元素在主轴方向上居中对齐
-        alignItems: "center", //将子元素在交叉轴方向上居中对齐
+        justifyContent: "center", // Center the child elements along the main axis.
+        alignItems: "center", // Center the child elements along the cross axis.
         flexDirection: "row", 
         marginTop: 20,
         height: 60,

@@ -16,7 +16,8 @@ export default function Search(){
             </TouchableOpacity>
             
             <TextInput 
-                style={styles.searchInput} // 当用户修改文本时，该回调函数就会被调用，并传递当前文本值作为参数给setSearchTerm
+                style={styles.searchInput} 
+                // When the user modifies the text, this callback function will be called and pass the current text value as a parameter to setSearchTerm.
                 placeholder="Search..."
             />
         </View>

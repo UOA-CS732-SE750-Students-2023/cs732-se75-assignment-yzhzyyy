@@ -14,7 +14,7 @@ export default function Home (){
 
     return(
         <SafeAreaView style={{flex:1, backgroundColor: "#ecccc5"}}>
-            {/* header部分 */}
+            {/* header*/}
             <Stack.Screen
                 options={{
                     headerBackground: () => (
@@ -32,22 +32,14 @@ export default function Home (){
                 }}
             />
 
-            {/* body部分 */}
+            {/* body */}
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{padding: 16}}>
-                    {/* 在此处定义welcome部分，包括用户头像和标题 */}
+                    {/* Welcome */}
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Text style={{fontSize:50, color:'#534b7a', paddingLeft:20}}>Hi, yzhzyyy </Text>
                     </View>
-
-                    {/* 在此处设置search组件 */}
-                        <Search navigation={router.navigation}/>
-                    
-                    {/* 这段代码使用了一个自定义的组件 Search，并在其中使用了 searchTerm 和 setSearchTerm 
-                        这两个 props。searchTerm 代表当前的搜索词，setSearchTerm 代表用于更新搜索词的函数。
-                        当用户点击搜索按钮时，如果当前的搜索词不为空，
-                        就使用 router.push 跳转到 /search/${searchTerm} 这个路径 */}
-
+                    <Search navigation={router.navigation}/>
                     <ScrollView showsVerticalScrollIndicator={false}>
                         <Pokemon/>
                     </ScrollView>
