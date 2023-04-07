@@ -89,8 +89,8 @@ This would navigate the user to the `/modal` page.<br>
 
 
 ### /app/modal.js
-This code provides a basic modal screen with a message and a dismiss button. When the user clicks on the menu button in the top right corner, a floating window will pop up.<br>
-> A Modal page is a UI design component that pops up as a floating layer on the current page to display temporary content. <br>
+This code provides a basic modal screen with a message and a dismiss button. When the user clicks on the menu button in the top right corner, a floating window will pop up.<br><br>
+A Modal page is a UI design component that pops up as a floating layer on the current page to display temporary content. <br><br>
 The `StatusBar` component sets the status bar color to white, and the `Text` component displays a message indicating that the Pokemon list is under construction.
 
 ### Search.jsx
@@ -101,11 +101,7 @@ In `search.jsx`, I defined a component named `Search` which returns a `View` com
 ### Pokemon.jsx
 `Pokemon` component is defined in this file which renders a list of Pokemon cards in a scrollable view.<br> 
 Inside `ScrollView` component, `data.map` function is used to iterate through the array of Pokemon objects and create a `TouchableOpacity` element for each item to show every Pokemon. <br>
-> * `require` function: This function is a built-in Node.js function that allows you to load modules or files in your code. 
-```
-const data = require('../../../pokemon.json');
-```
-After obtaining the data variable, use the `map` function within a `ScrollView` component to render each Pokemon in the data variable to the content defined below. <br>
+> * `require()` function: This is a built-in Node.js function that allows you to load modules or files in your code. <br>After obtaining the data variable, use the `map()` function within a `ScrollView` component to render each Pokemon in the data variable to the content defined below. <br>
 
 ### ScreenHeaderBtn.jsx
 The `ScreenHeaderBtn` component takes three props: `iconUrl`, `dimension`, `onPress`.<br>
