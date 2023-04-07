@@ -16,10 +16,6 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 | Style | CSS | JavaScript |
 | Randering | virtual DOM | native APIs |
 | Route | React Router | Navigator library |<br>
-i) **Usre** interface：React components can include HTML tags，while RN supports specific JSX tags.<br>
-ii) **Style**：React uses CSS for rendering styles, while RN uses JavaScript for rendering styles.<br>
-iii) **Randering**：React uses a virtual DOM, while RN uses native APIs.<br>
-iv) **Route**: React uses React Router to navigate between different pages, while RN uses the Navigator library for navigation.<br>
 
 ## What is expo? <br>
   Expo is a set of tools, libraries, and services for building native iOS and Android applications using JavaScript.<br>
