@@ -29,8 +29,10 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 
 ## 1. User Guide  
 
-**Step 1**: Download the `my-library` folder and open it with a code editor (using VSCode as an example).  
-**Step 2**: Open the terminal in VSCode and enter the following code to install the necessary tools.  <br>
+### Step 1:
+Download the `my-library` folder and open it with a code editor (using VSCode as an example).  
+### Step 2:
+Open the terminal in VSCode and enter the following code to install the necessary tools. <br>
 > * install npm
 ```npm install```
 > * install expo-cli
@@ -39,8 +41,10 @@ cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 ```npx expo install react-native@0.71.6```
 > * Start npm
 ```npm start``` 
-> Then you will see the following message:<br>
-> <img src="./images/Metro.jpg"/><br>
+Then you will see the following message:<br>
+<img src="./images/Metro.jpg" width = "70%" height = "70%"/><br>
+Additionally, you need to install the Expo Go app on your mobile phone. For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.
+
 
 
 
