@@ -57,10 +57,31 @@ This file implements the redirection functionality.<br> When the stack in `_layo
 This is the main page of the mobile app.<br>
 It uses various components such as `Stack`, `SafeAreaView`, `LinearGradient`, `ScrollView`, `ScreenHeaderBtn`, `Search`, and `Pokemon` to create a user interface with a header section and a body section.<br> It defines a screen in a Stack Navigator in a React Navigation application. The screen is customized using some specific options for the navigation header. <br>
 > **Components**<br>
+> * `Stack.Screen`: <br>This component allows you to define options for each screen, including the title, style, navigation bar behavior, and stack parameters. It helps to build the perfect navigation experience. The options for `<Stack.Screen>` is like this:<br>
+```
+<Stack.Screen
+  options={{
+    headerBackground: () => (
+      <LinearGradient
+          colors={['#ad9ec7', '#ecccc5']}
+          style={{ flex: 1 }}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 0, y: 1 }}
+      />),
+    headerTitle: '',
+    headerShadowVisible:false,
+    headerLeft: () => (
+        <ScreenHeaderBtn onPress={() => router.push('./modal')} iconUrl={icons.menu} dimension='60%'/>
+    )
+  }}
+/>
+```
+
 > * `SafeAreaView`: <br>SafeAreaView is provided by `react-native-safe-area-context`. It ensures that the content is displayed within the safe areas of the device's screen. This is important because on devices like the iPhone X or newer models, the top screen notch can obstruct a portion of the screen. SafeAreaView helps prevent content from being obstructed by the device's hardware, and ensures that it is displayed within the visible screen area.
 > * `LinearGradient`: <br>LinearGradient is provided by the `Expo` library for creating a linear gradient effect by specifying a range of colors and positions along a linear axis. 
 > * `ScrollView`: <br>ScrollView is provided by  `react-native-gesture-handler`. It provides a scrollable view for displaying content that is larger than the visible area of the screen.<br> `showsVerticalScrollIndicator={false}` means hide the display of the vertical scroll bar in this component.<br>
 > * `ScreenHeaderBtn`,`Search` and `Pokemon` are three custom components, which will be explained later.
+
 
 ### Search.jsx
 In `search.jsx`, I defined a component named `Search` which returns a `View` component containing a search button and a text input field. The search button includes a `TouchableOpacity` component with the `searchBtn` style class and an `Image` component.<br>
