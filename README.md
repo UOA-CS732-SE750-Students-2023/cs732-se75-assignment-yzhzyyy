@@ -1,7 +1,7 @@
 # cs732-se75-assignment-yzhzyyy
 cs732-se75-assignment-yzhzyyy created by GitHub Classroom
 
-# Topic: Using React Native and Expo to Creact a Mobile Application <br>
+# Topic: Using React Native and Expo to Creact a Mobile App in iOS <br>
 
 ## What is React Native (RN)? <br>
 
@@ -54,7 +54,7 @@ Then you will see the following message:<br>
 <img src="./images/Metro.jpg" width = "70%" height = "70%"/><br>
 
 ### Step 3:
-Install the `Expo Go` app on your mobile phone.<br> For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.
+Download the `Expo Go` app on your mobile phone.<br> For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.
 
 ## 2. Project Files Overview
 <img src="./images/catalog.jpg" width="15%" height = "15%"/><br>
