@@ -54,7 +54,7 @@ Then you will see the following message:<br>
 <img src="./images/Metro.jpg" width = "70%" height = "70%"/><br>
 
 ### Step 3:
-Download the `Expo Go` app on your mobile phone.<br> For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.<br>iOS is a good choice.
+Download the `Expo Go` app on your mobile phone.<br> For iOS, you can open your camera and scan the QR code to enter, and for Android, you can scan the QR code with the Expo Go app.<br>** Using iOS is a good choice. **
 
 ## 2. Project Files Overview
 <img src="./images/catalog.jpg" width="15%" height = "15%"/><br>
